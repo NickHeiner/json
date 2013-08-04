@@ -40,7 +40,7 @@ describe('.find', function () {
         bowerJson.find(__dirname, function (err) {
             expect(err).to.be.an(Error);
             expect(err.code).to.equal('ENOENT');
-            expect(err.message).to.equal('Neither bower.json nor component.json were found in ' + __dirname);
+            expect(err.message).to.equal('bower-json: None of ("bower.json", "component.json", ".bower.json") were found in ' + __dirname);
             done();
         });
     });
